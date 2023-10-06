@@ -1,0 +1,29 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Control</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <button id="turnOnBtn">Ligue a luz</button>
+    <img id="myImage" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/a-luz-pode-ser-interpretada-como-onda-eletromagnetica-ou-como-particula-591d9fcdbc647.jpg" style="width:100px">
+    <button id="turnOffBtn">Apague a luz</button>
+</body>
+</html>
+
+JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+    function turnOnLight() {
+        document.getElementById('myImage').src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/a-luz-pode-ser-interpretada-como-onda-eletromagnetica-ou-como-particula-591d9fcdbc647.jpg';
+    }
+
+    function turnOffLight() {
+        document.getElementById('myImage').src = 'https://img.freepik.com/fotos-gratis/uma-lampada-nao-luminosa-paira-no-espaco-da-copia-de-fundo-desfocado-escuro_169016-9524.jpg';
+    }
+
+    document.getElementById('turnOnBtn').addEventListener('click', turnOnLight);
+    document.getElementById('turnOffBtn').addEventListener('click', turnOffLight);
+});
